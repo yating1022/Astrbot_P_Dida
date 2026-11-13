@@ -2,7 +2,7 @@ name: astrbot_plugin_dida_improved_2
 display_name: 滴答清单改进版 2
 short_desc: 在 AstrBot 中连接 Dida365（滴答清单），支持完整的任务管理功能（第二实例）。
 desc: 连接 Dida365（滴答清单）Open API，支持查询、创建、完成、更新、移动和删除任务；正确处理收集箱（Inbox）任务；提供指令和 LLM 自然语言两种交互方式。本仓库是 astrbot_plugin_dida_improved 的独立第二实例分支，指令与 LLM 工具均带 _2 后缀，可与原实例同时安装。
-author: c8633
+author: yating1022
 version: v0.3.0
-repo: https://github.com/c8633/astrbot_plugin_dida_improved_2
+repo: https://github.com/yating1022/Astrbot_P_Dida
 astrbot_version: ">=4.0.0"

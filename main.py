@@ -13,7 +13,7 @@ from .service import DidaService
 
 @register(
     "astrbot_plugin_dida_improved_2",
-    "c8633",
+    "yating1022",
     "Dida365 Improved 2 - Inbox support and full task management (second instance)",
     "0.1.0-beta",
 )

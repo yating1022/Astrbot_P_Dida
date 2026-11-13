@@ -24,7 +24,7 @@
 
 目前我正在着手将这个插件发布到 Astrbot 的插件市场，如果发布成功就可以在 Astrbot 的插件页面直接下载安装。在此之前，可以先通过手动安装的方式使用本插件，具体的操作流程如下：
 
-1. 从本项目的仓库地址 [astrbot_plugin_dida_improved_2](https://github.com/c8633/astrbot_plugin_dida_improved_2) 下载插件的源码压缩包 (`main` 分支)；
+1. 从本项目的仓库地址 [Astrbot_P_Dida](https://github.com/yating1022/Astrbot_P_Dida) 下载插件的源码压缩包 (`main` 分支)；
 2. 将插件目录解压后放置到 AstrBot 的运行时目录下的 `data/plugins/` 下；
 3. 在 WebUI 中重载插件，或者直接重启 AstrBot；
 4. 在插件配置中至少应当填写您的 `access_token`。
@@ -92,7 +92,7 @@
 
 ### 🌐 开源地址
 
-本插件的开源地址为 [c8633](https://github.com/c8633)/[astrbot_plugin_dida_improved_2](https://github.com/c8633/astrbot_plugin_dida_improved_2)，上游项目为 [GitHubonline1396529](https://github.com/GitHubonline1396529)/[astrbot_plugin_dida_improved](https://github.com/GitHubonline1396529/astrbot_plugin_dida_improved)。
+本插件的开源地址为 [yating1022](https://github.com/yating1022)/[Astrbot_P_Dida](https://github.com/yating1022/Astrbot_P_Dida)，上游项目为 [GitHubonline1396529](https://github.com/GitHubonline1396529)/[astrbot_plugin_dida_improved](https://github.com/GitHubonline1396529/astrbot_plugin_dida_improved)。
 
 ### 📖 文档
 
