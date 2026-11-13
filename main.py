@@ -12,9 +12,9 @@ from .service import DidaService
 
 
 @register(
-    "astrbot_plugin_dida_improved",
-    "Githubonline1396529",
-    "Dida365 Improved - Inbox support and full task management",
+    "astrbot_plugin_dida_improved_2",
+    "c8633",
+    "Dida365 Improved 2 - Inbox support and full task management (second instance)",
     "0.1.0-beta",
 )
 class DidaImprovedPlugin(Star):
@@ -71,13 +71,13 @@ class DidaImprovedPlugin(Star):
             return service.explain_error(exc)
 
     @filter.permission_type(filter.PermissionType.ADMIN)
-    @filter.command("dida_ping")
+    @filter.command("dida_ping_2")
     async def dida_ping(self, event: AstrMessageEvent):
         """Check whether the plugin is loaded and configured."""
         yield event.plain_result(self._build_service().build_status_summary())
 
     @filter.permission_type(filter.PermissionType.ADMIN)
-    @filter.command("dida_probe")
+    @filter.command("dida_probe_2")
     async def dida_probe(self, event: AstrMessageEvent):
         """Run a minimal read-only API probe."""
         yield event.plain_result(
@@ -86,7 +86,7 @@ class DidaImprovedPlugin(Star):
 
     # ----- LLM tools (replace legacy commands) -----
 
-    @filter.llm_tool(name="list_dida_projects")
+    @filter.llm_tool(name="list_dida_projects_2")
     async def list_dida_projects_llm(self, event: AstrMessageEvent):
         """List all Dida365 projects including the Inbox.
 
@@ -97,7 +97,7 @@ class DidaImprovedPlugin(Star):
             lambda service: service.list_projects_summary()
         )
 
-    @filter.llm_tool(name="list_dida_tasks")
+    @filter.llm_tool(name="list_dida_tasks_2")
     async def list_dida_tasks_llm(
         self,
         event: AstrMessageEvent,
@@ -121,7 +121,7 @@ class DidaImprovedPlugin(Star):
             lambda service: service.list_unfinished_tasks_summary(limit=limit)
         )
 
-    @filter.llm_tool(name="update_dida_task")
+    @filter.llm_tool(name="update_dida_task_2")
     async def update_dida_task_llm(
         self, event: AstrMessageEvent, task_id: str, updates_json: str = ""
     ):
@@ -155,7 +155,7 @@ class DidaImprovedPlugin(Star):
             lambda service: service.update_task_details(task_id, updates)
         )
 
-    @filter.llm_tool(name="create_dida_task")
+    @filter.llm_tool(name="create_dida_task_2")
     async def create_dida_task_llm(
         self,
         event: AstrMessageEvent,
@@ -209,7 +209,7 @@ class DidaImprovedPlugin(Star):
             )
         )
 
-    @filter.llm_tool(name="complete_dida_task")
+    @filter.llm_tool(name="complete_dida_task_2")
     async def complete_dida_task_llm(
         self, event: AstrMessageEvent, task_id: str
     ):
@@ -222,7 +222,7 @@ class DidaImprovedPlugin(Star):
             lambda service: service.complete_task(task_id)
         )
 
-    @filter.llm_tool(name="reopen_dida_task")
+    @filter.llm_tool(name="reopen_dida_task_2")
     async def reopen_dida_task_llm(self, event: AstrMessageEvent, task_id: str):
         """Reopen (uncomplete) a completed Dida365 task.
 
@@ -236,7 +236,7 @@ class DidaImprovedPlugin(Star):
             lambda service: service.reopen_task(task_id)
         )
 
-    @filter.llm_tool(name="delete_dida_task")
+    @filter.llm_tool(name="delete_dida_task_2")
     async def delete_dida_task_llm(self, event: AstrMessageEvent, task_id: str):
         """Delete a Dida365 task permanently.
 
@@ -247,7 +247,7 @@ class DidaImprovedPlugin(Star):
             lambda service: service.delete_task(task_id)
         )
 
-    @filter.llm_tool(name="move_dida_task")
+    @filter.llm_tool(name="move_dida_task_2")
     async def move_dida_task_llm(
         self,
         event: AstrMessageEvent,
@@ -268,7 +268,7 @@ class DidaImprovedPlugin(Star):
             )
         )
 
-    @filter.llm_tool(name="get_dida_task_detail")
+    @filter.llm_tool(name="get_dida_task_detail_2")
     async def get_dida_task_detail_llm(
         self,
         event: AstrMessageEvent,
@@ -285,7 +285,7 @@ class DidaImprovedPlugin(Star):
             lambda service: service.get_task_by_id(project_id, task_id)
         )
 
-    @filter.llm_tool(name="list_completed_dida_tasks")
+    @filter.llm_tool(name="list_completed_dida_tasks_2")
     async def list_completed_dida_tasks_llm(
         self,
         event: AstrMessageEvent,
@@ -323,7 +323,7 @@ class DidaImprovedPlugin(Star):
             )
         )
 
-    @filter.llm_tool(name="get_dida_task_comments")
+    @filter.llm_tool(name="get_dida_task_comments_2")
     async def get_dida_task_comments_llm(
         self,
         event: AstrMessageEvent,
@@ -340,7 +340,7 @@ class DidaImprovedPlugin(Star):
             lambda service: service.get_task_comments(project_id, task_id)
         )
 
-    @filter.llm_tool(name="add_dida_task_comment")
+    @filter.llm_tool(name="add_dida_task_comment_2")
     async def add_dida_task_comment_llm(
         self,
         event: AstrMessageEvent,
@@ -359,7 +359,7 @@ class DidaImprovedPlugin(Star):
             lambda service: service.add_task_comment(project_id, task_id, title)
         )
 
-    @filter.llm_tool(name="delete_dida_task_comment")
+    @filter.llm_tool(name="delete_dida_task_comment_2")
     async def delete_dida_task_comment_llm(
         self,
         event: AstrMessageEvent,

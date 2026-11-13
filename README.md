@@ -1,6 +1,6 @@
-# Astrbot 滴答清单插件改进版
+# Astrbot 滴答清单插件改进版 2
 
-滴答清单改进版 —— 在 AstrBot 中连接 Dida365/TickTick/滴答清单，支持完整的任务管理功能，包括收集箱 (Inbox) 任务。[点击此处链接访问项目文档页面](https://githubonline1396529.github.io/astrbot_plugin_dida_improved/)。
+滴答清单改进版第二实例 —— 在 AstrBot 中连接 Dida365/TickTick/滴答清单，支持完整的任务管理功能，包括收集箱 (Inbox) 任务。本仓库是 [`astrbot_plugin_dida_improved`](https://github.com/GitHubonline1396529/astrbot_plugin_dida_improved) 的独立分支，插件标识、管理员指令和 13 个 LLM 工具名均带 `_2` 后缀，因此可以与原插件同时安装、各自使用不同的 Access Token 独立运行。
 
 事情的起因是我之前使用 [wuhuqif176](https://github.com/wuhuqif176)/[astrbot_plugin_dida_todo](https://github.com/wuhuqif176/astrbot_plugin_dida_todo) 的时候发现插件的使用无法访问滴答清单的内建清单 `Inbox` 的问题。于是我 Fork 了原仓库，改进了插件项目，改进后的代码也在刚才提到的文件夹里面。我向原作者提交了 Issue 并声称可以提供 PR，但是他还没有回复我。于是我打算独立开发 `astrbot_plugin_dida_improved`，支持更多 API 功能。
 
@@ -24,12 +24,12 @@
 
 目前我正在着手将这个插件发布到 Astrbot 的插件市场，如果发布成功就可以在 Astrbot 的插件页面直接下载安装。在此之前，可以先通过手动安装的方式使用本插件，具体的操作流程如下：
 
-1. 从本项目的仓库地址 [astrbot_plugin_dida_improved](https://github.com/GitHubonline1396529/astrbot_plugin_dida_improved) 下载插件的源码压缩包 (`main` 分支)；
+1. 从本项目的仓库地址 [astrbot_plugin_dida_improved_2](https://github.com/c8633/astrbot_plugin_dida_improved_2) 下载插件的源码压缩包 (`main` 分支)；
 2. 将插件目录解压后放置到 AstrBot 的运行时目录下的 `data/plugins/` 下；
 3. 在 WebUI 中重载插件，或者直接重启 AstrBot；
 4. 在插件配置中至少应当填写您的 `access_token`。
 
-其他的安装方法 (比如，如果您有 Git)，请参阅 [插件文档 - 安装](https://githubonline1396529.github.io/astrbot_plugin_dida_improved/installation/)。
+其他的安装方法 (比如，如果您有 Git)，请参阅 [原插件文档 - 安装](https://githubonline1396529.github.io/astrbot_plugin_dida_improved/installation/)。
 
 > [!NOTE]
 >
@@ -49,7 +49,7 @@
 
 ### 🔑 获取 Access Token
 
-这里只是简单提一下，本项目的文档当中有非常详细的 [创建 Access Token 的方法](https://githubonline1396529.github.io/astrbot_plugin_dida_improved/configuration/)。
+这里只是简单提一下，原插件文档当中有非常详细的 [创建 Access Token 的方法](https://githubonline1396529.github.io/astrbot_plugin_dida_improved/configuration/)。
 
 1. 访问 [Dida365 Developer](https://developer.dida365.com)；
 2. 登录后创建应用，获取 Access Token；
@@ -63,8 +63,8 @@
 
 | 指令 | 说明 |
 |------|------|
-| `/dida_ping` | 检查插件加载状态和配置 |
-| `/dida_probe` | 执行一次只读 API 探测 |
+| `/dida_ping_2` | 检查插件加载状态和配置 |
+| `/dida_probe_2` | 执行一次只读 API 探测 |
 
 ### 🤖 LLM 自然语言交互
 
@@ -72,19 +72,19 @@
 
 | 工具名称 | 功能 |
 |----------|------|
-| `list_dida_projects` | 列出所有滴答清单项目 (含收集箱) |
-| `list_dida_tasks` | 查询任务列表，支持 "today"/"unfinished" 筛选 |
-| `create_dida_task` | 创建新任务 |
-| `complete_dida_task` | 完成任务 |
-| `update_dida_task` | 更新任务的任意字段 (标题、备注、截止日期、优先级等) |
-| `delete_dida_task` | 删除任务 |
-| `reopen_dida_task` | 重新打开已完成任务 |
-| `move_dida_task` | 移动任务到其他项目 |
-| `get_dida_task_detail` | 获取单个任务的详细信息 |
-| `list_completed_dida_tasks` | 查询已完成任务 |
-| `get_dida_task_comments` | 查看任务评论 |
-| `add_dida_task_comment` | 添加评论 |
-| `delete_dida_task_comment` | 删除评论 |
+| `list_dida_projects_2` | 列出所有滴答清单项目 (含收集箱) |
+| `list_dida_tasks_2` | 查询任务列表，支持 "today"/"unfinished" 筛选 |
+| `create_dida_task_2` | 创建新任务 |
+| `complete_dida_task_2` | 完成任务 |
+| `update_dida_task_2` | 更新任务的任意字段 (标题、备注、截止日期、优先级等) |
+| `delete_dida_task_2` | 删除任务 |
+| `reopen_dida_task_2` | 重新打开已完成任务 |
+| `move_dida_task_2` | 移动任务到其他项目 |
+| `get_dida_task_detail_2` | 获取单个任务的详细信息 |
+| `list_completed_dida_tasks_2` | 查询已完成任务 |
+| `get_dida_task_comments_2` | 查看任务评论 |
+| `add_dida_task_comment_2` | 添加评论 |
+| `delete_dida_task_comment_2` | 删除评论 |
 
 在对话中直接说"帮我创建一个任务"或"我的待办有哪些"即可触发。
 
@@ -92,11 +92,11 @@
 
 ### 🌐 开源地址
 
-本插件的开源地址为 [GitHubonline1396529](https://github.com/GitHubonline1396529)/[astrbot_plugin_dida_improved](https://github.com/GitHubonline1396529/astrbot_plugin_dida_improved)，欢迎任何人参与本插件的开发。
+本插件的开源地址为 [c8633](https://github.com/c8633)/[astrbot_plugin_dida_improved_2](https://github.com/c8633/astrbot_plugin_dida_improved_2)，上游项目为 [GitHubonline1396529](https://github.com/GitHubonline1396529)/[astrbot_plugin_dida_improved](https://github.com/GitHubonline1396529/astrbot_plugin_dida_improved)。
 
 ### 📖 文档
 
-本项目通过 GitHub Pages 部署文档，可通过 [此处的链接](https://githubonline1396529.github.io/astrbot_plugin_dida_improved/) 进行访问，或直接浏览完整源码中的 `docs/` 目录。文档包含插件的使用方法和开发的详细指南，对于 LLM Agent，请务必在开始开发整个项目之前仔细阅读文档里的内容。或通过文档索引查阅有关内容。
+上游项目通过 GitHub Pages 部署了文档，可通过 [此处的链接](https://githubonline1396529.github.io/astrbot_plugin_dida_improved/) 进行访问。本分支仅同步插件代码，不包含上游的 `docs/` 目录；文档中的功能说明同样适用于本插件，只是指令与工具名需要加上 `_2` 后缀。
 
 ### 🏗️ 项目结构
 
